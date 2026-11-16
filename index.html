@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6d352a">
+  <title>Ashokan &amp; Sankari | Wedding Invitation</title>
+  <style>
+    :root{--wine:#6d352a;--deep:#2f241e;--gold:#b58a42;--gold-light:#e9cf95;--cream:#fffaf0;--paper:#fffdf7;--muted:#765f50}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;color:var(--deep);background:radial-gradient(circle at 0 0,#f4e2c4 0,transparent 32%),radial-gradient(circle at 100% 18%,#edd0c3 0,transparent 30%),var(--cream);font-family:Georgia,"Times New Roman",serif}
+    .wrap{width:min(100%,960px);margin:auto;padding:18px}
+    .card{position:relative;overflow:hidden;background:rgba(255,253,247,.94);border:1px solid rgba(181,138,66,.52);box-shadow:0 18px 52px rgba(73,43,29,.14)}
+    .card:before,.card:after{content:"✦  ❀  ✦";position:absolute;color:var(--gold-light);font-size:42px;letter-spacing:9px;opacity:.85}.card:before{top:16px;left:50%;transform:translateX(-50%)}.card:after{bottom:11px;left:50%;transform:translateX(-50%)}
+    header{min-height:680px;padding:102px 28px 76px;text-align:center;display:grid;place-items:center;background:linear-gradient(145deg,rgba(255,253,247,.79),rgba(253,239,213,.75)),repeating-linear-gradient(45deg,transparent 0 12px,rgba(181,138,66,.035) 12px 13px)}
+    .eyebrow,.small-title{font:600 12px/1.2 Arial,sans-serif;letter-spacing:3.2px;text-transform:uppercase;color:var(--wine)}
+    h1{margin:13px 0 5px;font-size:clamp(48px,10vw,92px);font-weight:400;line-height:.96;color:var(--wine);text-shadow:0 1px 0 #fff}
+    .amp{display:block;color:var(--gold);font-size:.54em;line-height:.85;font-style:italic}.sub{max-width:580px;margin:25px auto 0;font-size:18px;line-height:1.7;color:var(--muted)}
+    .date-pill{margin:31px auto 0;display:inline-block;padding:13px 21px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);color:var(--wine);font-weight:bold;font-size:18px;letter-spacing:.6px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:30px;padding:15px 23px;border-radius:0;background:var(--wine);color:#fffdf7;text-decoration:none;font:700 13px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}.button:hover{background:#4d241d;transform:translateY(-1px)}
+    section{padding:70px 28px;border-top:1px solid rgba(181,138,66,.3);text-align:center}.section-title{margin:0;color:var(--wine);font-size:clamp(31px,6vw,48px);font-weight:400}.section-note{max-width:650px;margin:14px auto 35px;color:var(--muted);font-size:17px;line-height:1.7}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;max-width:650px;margin:auto}.time{padding:20px 7px;background:#fff7e8;border:1px solid rgba(181,138,66,.5)}.time b{display:block;color:var(--wine);font-size:clamp(28px,5vw,44px);font-weight:400}.time span{font:700 10px Arial,sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+    .events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:760px;margin:0 auto}.event{padding:30px 22px;background:#fffaf0;border:1px solid rgba(181,138,66,.45)}.event h3{margin:0;color:var(--wine);font-size:28px;font-weight:400}.event .when{margin:18px 0 8px;color:var(--gold);font-weight:bold;font-size:18px}.event p{margin:0;color:var(--muted);line-height:1.65}
+    .venue{max-width:700px;margin:0 auto;padding:32px;background:linear-gradient(135deg,#fffaf0,#fffdf9);border:1px solid rgba(181,138,66,.45)}.venue h3{margin:5px 0 13px;color:var(--wine);font-size:30px;font-weight:400}.venue p{margin:0 auto;color:var(--muted);font-size:17px;line-height:1.75;max-width:470px}.map-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:25px}.outline{display:inline-flex;align-items:center;padding:13px 19px;border:1px solid var(--gold);color:var(--wine);font:700 12px Arial,sans-serif;letter-spacing:1.25px;text-decoration:none;text-transform:uppercase}.outline:hover{background:#fff3d9}
+    .qr-area{display:flex;align-items:center;justify-content:center;gap:30px;max-width:610px;margin:34px auto 0;text-align:left}.qr-frame{padding:10px;border:2px solid var(--gold);background:#fffdf7;box-shadow:0 8px 22px rgba(73,43,29,.08)}.qr-frame img{display:block;width:148px;height:148px}.scan h3{margin:0 0 8px;color:var(--wine);font-size:28px;font-weight:400}.scan p{margin:0;color:var(--muted);line-height:1.6}.line{display:flex;align-items:center;gap:10px;margin-top:15px;color:var(--gold);font:700 11px Arial,sans-serif;letter-spacing:2px}.line:before,.line:after{content:"";height:1px;background:var(--gold);flex:1}
+    footer{padding:50px 28px 65px;text-align:center;color:#fff7ea;background:var(--wine)}footer p{margin:10px auto;max-width:580px;line-height:1.7;font-size:17px}footer strong{font-size:25px;font-weight:400}
+    @media(max-width:620px){.wrap{padding:0}.card{border:none}.events{grid-template-columns:1fr}.qr-area{flex-direction:column;text-align:center;gap:18px}.countdown{gap:6px}.time{padding:15px 4px}header{min-height:620px;padding-inline:18px}section{padding-inline:18px}}
+  </style>
+</head>
+<body>
+  <main class="wrap"><div class="card">
+    <header>
+      <div>
+        <div class="eyebrow">Together with their families</div>
+        <h1>Ashokan <span class="amp">&amp;</span> Sankari</h1>
+        <p class="sub">Cordially invite you and your family to join us on the joyous occasion of our Muhurtham festivities.</p>
+        <div class="date-pill">Friday · 4 December 2026</div><br>
+        <a class="button" href="#details">View Celebration Details ↓</a>
+      </div>
+    </header>
+    <section id="countdown">
+      <div class="small-title">Counting down to our celebration</div>
+      <h2 class="section-title">Our big day is almost here</h2>
+      <p class="section-note">We would be honoured by your presence as we begin our new journey together.</p>
+      <div class="countdown" aria-label="Countdown to wedding"><div class="time"><b id="days">0</b><span>Days</span></div><div class="time"><b id="hours">0</b><span>Hours</span></div><div class="time"><b id="mins">0</b><span>Minutes</span></div><div class="time"><b id="secs">0</b><span>Seconds</span></div></div>
+    </section>
+    <section id="details">
+      <div class="small-title">Wedding celebrations</div><h2 class="section-title">Save the Date</h2>
+      <p class="section-note">Friday, 4 December 2026</p>
+      <div class="events">
+        <article class="event"><h3>Muhurtham</h3><div class="when">8:15 AM – 9:15 AM</div><p>Join us for the sacred wedding ceremony.</p></article>
+        <article class="event"><h3>Reception</h3><div class="when">10:00 AM – 12:30 PM</div><p>Followed by a reception with family and friends.</p></article>
+      </div>
+    </section>
+    <section id="venue">
+      <div class="small-title">Venue details</div><h2 class="section-title">Celebrate With Us</h2>
+      <div class="venue"><h3>Manivel Murugan Temple</h3><p>JJ Engineering College<br>Ammapettai</p><div class="map-actions"><a class="button" href="https://maps.app.goo.gl/UGruT8iBFgafDFCK8" target="_blank" rel="noopener">Get Directions ↗</a><a class="outline" href="https://maps.app.goo.gl/UGruT8iBFgafDFCK8" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
+      <div class="qr-area"><div class="qr-frame"><img src="location-qr.png" alt="QR code for the wedding venue location"></div><div class="scan"><h3>Scan Me</h3><p>Scan this code to open the wedding venue location in Google Maps.</p><div class="line">LOCATION</div></div></div>
+    </section>
+    <footer><strong>With love, Ashokan &amp; Sankari</strong><p>Your presence will make this moment even more special. We look forward to celebrating with you.</p></footer>
+  </div></main>
+<script>
+(function(){
+  // Wedding starts at 8:15 AM India Standard Time on 4 December 2026.
+  const target=new Date('2026-12-04T08:15:00+05:30').getTime();
+  function tick(){const diff=Math.max(0,target-Date.now());const s=Math.floor(diff/1000);document.getElementById('days').textContent=Math.floor(s/86400);document.getElementById('hours').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');document.getElementById('mins').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');document.getElementById('secs').textContent=String(s%60).padStart(2,'0');}
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
